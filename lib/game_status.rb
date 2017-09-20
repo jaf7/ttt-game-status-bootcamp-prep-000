@@ -16,13 +16,15 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  result = false
+  # result = false
   WIN_COMBINATIONS.each do |win_combo|
     win_index_1 = win_combo[0]
     win_index_2 = win_combo[1]
     win_index_3 = win_combo[2]
-    result = win_combo if board[win_index_1] == board[win_index_2] && board[win_index_2] == board[win_index_3]
-    binding.pry
+    if position_taken?(board, win_index_1) && position_taken(board, win_index_2) && position_taken(board, win_index_3)
+      board[win_index_1] == board[win_index_2] && board[win_index_2] == board[win_index_3] ? result = win_combo : result = false
+    # result = win_combo if board[win_index_1] == board[win_index_2] && board[win_index_2] == board[win_index_3]
+    # binding.pry
     #   result = win_combo
     # else
     #   result = false
