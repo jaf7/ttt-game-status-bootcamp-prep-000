@@ -20,10 +20,10 @@ def won?(board)
   WIN_COMBINATIONS.each do |win_combo|
     position_1 = win_combo[0]
     position_2 = win_combo[1]
-    win_index_3 = win_combo[2]
-    if position_taken?(board, position_1) && position_taken?(board, position_2) && position_taken?(board, win_index_3)
-      if board[position_1] == board[position_2] && board[position_2] == board[win_index_3]
-      # board[position_1] == board[position_2] && board[position_2] == board[win_index_3] ? return win_combo : false
+    position_3 = win_combo[2]
+    if position_taken?(board, position_1) && position_taken?(board, position_2) && position_taken?(board, position_3)
+      if board[position_1] == board[position_2] && board[position_2] == board[position_3]
+      # board[position_1] == board[position_2] && board[position_2] == board[position_3] ? return win_combo : false
       # binding.pry # result => [0,1,2]
     else
       false
