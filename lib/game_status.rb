@@ -21,17 +21,13 @@ def won?(board) # an inner #each would return it's inner array...
     position_3 = win_combo[2]
     if position_taken?(board, position_1) && position_taken?(board, position_2) && position_taken?(board, position_3)
       if board[position_1] == board[position_2] && board[position_2] == board[position_3]
-        # return win_combo
-        result = win_combo
+        return win_combo
       else
-        # false
-        result = false
+        false
       end
     else
-      # false
-      result = false
+      false
     end
   end
-  # false
-  result
+  false
 end
