@@ -22,13 +22,12 @@ def won?(board)
     win_index_2 = win_combo[1]
     win_index_3 = win_combo[2]
     if position_taken?(board, win_index_1) && position_taken?(board, win_index_2) && position_taken?(board, win_index_3)
-      board[win_index_1] == board[win_index_2] && board[win_index_2] == board[win_index_3] ? result = win_combo : result = false
+      board[win_index_1] == board[win_index_2] && board[win_index_2] == board[win_index_3] ? blah = win_combo : blah = false
       puts "win_combo: #{win_combo}, result: #{result}"
-      yield result
     else
-      result = false
+      blah = false
     end
   end
   binding.pry
-  result
+  blah
 end
