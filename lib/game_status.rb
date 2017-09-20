@@ -23,13 +23,13 @@ def won?(board)
     win_index_3 = win_combo[2]
     if position_taken?(board, win_index_1) && position_taken?(board, win_index_2) && position_taken?(board, win_index_3)
       board[win_index_1] == board[win_index_2] && board[win_index_2] == board[win_index_3] ? result = win_combo : result = false
-      # binding.pry # result => [0,1,2]
+      binding.pry # result => [0,1,2]
     else
       result = false
     end
     # binding.pry # result => [0,1,2]
   end
-  binding.pry # result => NameError: undefined local variable or method `blah' for main:Object
+  # binding.pry # result => NameError: undefined local variable or method `blah' for main:Object
   result
 end
 board = ["X", "X", "X", "O", "O", " ", " ", " ", " "]
