@@ -31,3 +31,10 @@ def won?(board) # an inner #each would return it's inner array...
   end
   false
 end
+
+def full?(board)
+  board.each do |position|
+    return false if !position_taken?(position)
+  end
+  true
+end
