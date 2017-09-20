@@ -59,5 +59,6 @@ end
 
 def winner(board)
   winner = won?(board)
+  binding.pry
   winner[0]
 end
