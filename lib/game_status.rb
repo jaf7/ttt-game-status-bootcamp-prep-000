@@ -21,13 +21,10 @@ def won?(board)
     win_index_2 = win_combo[1]
     win_index_3 = win_combo[2]
     if board[win_index_1] == board[win_index_2] && board[win_index_2] == board[win_index_3]
-      # result = board.detect { |x| x == win_combo } 
       result = win_combo
-      binding.pry
     else
       result = false
     end
   end
-  binding.pry
   result
 end
