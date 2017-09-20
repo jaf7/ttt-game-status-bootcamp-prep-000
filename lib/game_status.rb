@@ -26,5 +26,6 @@ def won?(board)
       result = false
     end
   end
+  binding.pry
   result
 end
