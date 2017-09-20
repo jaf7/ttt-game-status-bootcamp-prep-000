@@ -13,7 +13,7 @@ WIN_COMBINATIONS = [
   [6,4,2]
 ]
 
-def won?(board)
+def won?(board) # an inner #each would return it's inner array...
   WIN_COMBINATIONS.each do |win_combo|
     position_1 = win_combo[0]
     position_2 = win_combo[1]
