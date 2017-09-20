@@ -16,19 +16,18 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  result = nil # ensure that scope of "result" variable will encompass do-end block
+  win = nil # ensure that scope of "result" variable will encompass the do-end block passed to #each
   WIN_COMBINATIONS.each do |win_combo|
     win_index_1 = win_combo[0]
     win_index_2 = win_combo[1]
     win_index_3 = win_combo[2]
     if position_taken?(board, win_index_1) && position_taken?(board, win_index_2) && position_taken?(board, win_index_3)
-      board[win_index_1] == board[win_index_2] && board[win_index_2] == board[win_index_3] ? result = win_combo : result = false
-      binding.pry # result => [0,1,2]
+      board[win_index_1] == board[win_index_2] && board[win_index_2] == board[win_index_3] ? return win_combo : false
+      # binding.pry # result => [0,1,2]
     else
-      result = false
+      false
     end
     # binding.pry # result => [0,1,2]
   end
-  result
 end
 board = ["X", "X", "X", "O", "O", " ", " ", " ", " "]
