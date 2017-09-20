@@ -22,12 +22,12 @@ def won?(board)
     win_index_2 = win_combo[1]
     win_index_3 = win_combo[2]
   end
-    if position_taken?(board, win_index_1) && position_taken?(board, win_index_2) && position_taken?(board, win_index_3)
-      board[win_index_1] == board[win_index_2] && board[win_index_2] == board[win_index_3] ? result = win_combo : result = false
-      binding.pry
-    else
-      result = false
-    end
+  if position_taken?(board, win_index_1) && position_taken?(board, win_index_2) && position_taken?(board, win_index_3)
+    board[win_index_1] == board[win_index_2] && board[win_index_2] == board[win_index_3] ? result = win_combo : result = false
+    # binding.pry
+  else
+    result = false
+  end
     # result = win_combo if board[win_index_1] == board[win_index_2] && board[win_index_2] == board[win_index_3]
     # binding.pry
     #   result = win_combo
