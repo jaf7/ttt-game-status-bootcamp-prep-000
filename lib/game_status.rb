@@ -22,4 +22,8 @@ def won?(board)
     win_index_3 = win_combo[2]
     if board[win_index_1] == board[win_index_2] && board[win_index_2] == board[win_index_3]
       won = true
+    else
+      won = false
+    end
+  end
 end
