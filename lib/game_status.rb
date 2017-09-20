@@ -22,14 +22,14 @@ def won?(board)
     win_index_2 = win_combo[1]
     win_index_3 = win_combo[2]
     if position_taken?(board, win_index_1) && position_taken?(board, win_index_2) && position_taken?(board, win_index_3)
-      board[win_index_1] == board[win_index_2] && board[win_index_2] == board[win_index_3] ? blah = win_combo : blah = false
-      puts "win_combo: #{win_combo}, blah: #{blah}"
+      board[win_index_1] == board[win_index_2] && board[win_index_2] == board[win_index_3] ? result = win_combo : result = false
+      puts "win_combo: #{win_combo}, result: #{result}"
     else
-      blah = false
+      result = false
     end
     binding.pry
   end
   binding.pry
-  blah
+  result
 end
 board = ["X", "X", "X", "O", "O", " ", " ", " ", " "]
