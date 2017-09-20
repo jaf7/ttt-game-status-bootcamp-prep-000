@@ -21,8 +21,8 @@ def won?(board)
     win_index_2 = win_combo[1]
     win_index_3 = win_combo[2]
     if board[win_index_1] == board[win_index_2] && board[win_index_2] == board[win_index_3]
-      binding.pry
       won = board.select(win_combo)
+      binding.pry
     else
       won = false
     end
