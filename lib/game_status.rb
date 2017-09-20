@@ -24,6 +24,7 @@ def won?(board)
     if position_taken?(board, win_index_1) && position_taken?(board, win_index_2) && position_taken?(board, win_index_3)
       board[win_index_1] == board[win_index_2] && board[win_index_2] == board[win_index_3] ? result = win_combo : result = false
       puts "win_combo: #{win_combo}, result: #{result}"
+      yield result
     else
       result = false
     end
